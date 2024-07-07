@@ -1,0 +1,126 @@
+/* ProfileManager.css */
+
+/* Variables */
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --primary: hsl(240, 5.9%, 10%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 4.8%, 95.9%);
+  --secondary-foreground: hsl(240, 5.9%, 10%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.8%, 45%);
+  --accent: hsl(240, 4.8%, 95.9%);
+  --accent-foreground: hsl(240, 5.9%, 10%);
+  --destructive: hsl(0, 72%, 51%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --ring: hsl(240, 5.9%, 10%);
+  --radius: 0.5rem;
+}
+
+/* Base styles */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Profile Manager Specific Styles */
+.profile-manager {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--card);
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+}
+
+.form-group p {
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.experience-item,
+.skill-item,
+.resume-info {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius);
+  background-color: var(--card);
+}
+
+.experience-item h3,
+.resume-info p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.skill-item span {
+  margin-right: 10px;
+}
+
+.skill-item button,
+.experience-item button,
+.resume-info button,
+.form-group button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  cursor: pointer;
+}
+
+.form-group button:hover,
+.skill-item button:hover,
+.experience-item button:hover,
+.resume-info button:hover {
+  background-color: hsl(240, 5.9%, 20%);
+}
+
+@media (max-width: 600px) {
+  .profile-manager {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    margin-bottom: 10;
+  }
+
+}
